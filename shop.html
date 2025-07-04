@@ -2,26 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NZG Merch | Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NZG Shop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="navbar">
   <a href="index.html" class="nav-logo">NZG</a>
-
   <nav>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="shop.html" class="active">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li><a href="order.html">Order</a></li>
-      <li><a href="terms.html">T&C's</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="terms-privacy.html">Terms & Privacy</a></li>
     </ul>
     <div class="burger" id="burger">
       <div></div><div></div><div></div>
@@ -29,33 +22,58 @@
   </nav>
 </header>
 
+<!-- FEATURED PRODUCT -->
+<section class="hero">
+  <h1 class="hero-title">🔥 Limited Edition NZG Hoodies</h1>
+  <p class="hero-subtitle">Stylish. Comfy. Proudly Local.</p>
+  <a href="order.html" class="cta-button btn-glow">Order Now</a>
+</section>
+
+<!-- SHOP GRID -->
 <main class="shop-container">
-  <h1>🛍️ NZG T-Shirts & Hoodies</h1>
-  <p class="shop-intro">Look sharp while repping NZG. Limited drops only.</p>
+  <h2>🛍️ Available Merch</h2>
+  <p class="shop-intro">Support the brand by wearing NZG Merch. Limited stock!</p>
 
   <div class="product-grid">
-
     <div class="product-card">
-      <img src="-t-shirt.jpg" alt="NZG Blue Tee">
-      <h3>NZG Blue Tee</h3>
-      <p>R250</p>
-      <a href="order.html" class="cta-button">Order Now</a>
+      <img src="blue-tee.jpg" alt="NZG Blue T-Shirt" />
+      <h3>NZG Blue T-Shirt</h3>
+      <p>Bold, breathable cotton. NZG logo on chest.</p>
+      <p class="price">R180</p>
+      <a href="order.html" class="cta-button">Order</a>
     </div>
 
     <div class="product-card">
-      <img src="Hoodie-Charcoal.webp" alt="NZG Hoodie">
-      <h3>NZG Hoodie (Black)</h3>
-      <p>R400</p>
-      <a href="order.html" class="cta-button">Order Now</a>
+      <img src="black-hoodie.jpg" alt="NZG Black Hoodie" />
+      <h3>NZG Black Hoodie</h3>
+      <p>Comfy fleece-lined hoodie with bold white NZG logo.</p>
+      <p class="price">R300</p>
+      <a href="order.html" class="cta-button">Order</a>
     </div>
 
-    <!-- Add more products as needed -->
+    <div class="product-card">
+      <img src="white-hoodie.jpg" alt="NZG White Hoodie" />
+      <h3>NZG White Hoodie</h3>
+      <p>Crisp, minimal, clean. A favorite for any season.</p>
+      <p class="price">R300</p>
+      <a href="order.html" class="cta-button">Order</a>
+    </div>
+  </div>
 
+  <!-- Payment info -->
+  <div class="payment-info">
+    <h3>💳 Payment Options</h3>
+    <p>Once you submit your order, you can pay using:</p>
+    <ul>
+      <li>✅ SnapScan QR Code</li>
+      <li>✅ Yoco Secure Link</li>
+      <li>✅ Cash on Delivery (local only)</li>
+    </ul>
   </div>
 </main>
 
 <footer class="site-footer">
-  <p> &copy; 2025 NZG Photography & Merch. All rights reserved.</p>
+  <p>&copy; 2025 NZG Photography & Merch. All rights reserved.</p>
 </footer>
 
 <script src="js/script.js"></script>
