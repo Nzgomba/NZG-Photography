@@ -846,3 +846,42 @@ footer a:hover {
   font-size: 1rem;
   margin-bottom: 1em;
 }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.cta-button {
+  background-color: #0077B6;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 280px;
+}
+
+.cta-button:hover {
+  background-color: #023E8A;
+  transform: translateY(-3px);
+}
+
+.btn-glow {
+  background-image: linear-gradient(to right, #1B4965, #0077B6);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.3);
+  border: none;
+}
+
+.btn-glow:hover {
+  background-image: linear-gradient(to right, #0077B6, #023E8A);
+  box-shadow: 0 0 14px rgba(0, 119, 182, 0.6);
+}
