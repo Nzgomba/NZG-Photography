@@ -104,5 +104,23 @@
   </footer>
 
   <script src="js/script.js"></script>
+  
+  <!-- ...existing code... -->
+<script src="js/script.js"></script>
+<script>
+  // Animate review cards on scroll
+  function revealReviews() {
+    const cards = document.querySelectorAll('.review-card');
+    const trigger = window.innerHeight * 0.85;
+    cards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+      if (top < trigger) {
+        card.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealReviews);
+  window.addEventListener('load', revealReviews);
+</script>
 </body>
 </html>

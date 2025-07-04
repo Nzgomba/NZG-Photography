@@ -21,6 +21,10 @@ function updatePreview() {
   }
 }
 
-
-
+document.getElementById('item').add
+EventListener('change', updatePreview); 
+document.getElementById('item').add
+EventListener('input', updatePreview);
+document.getElementById('item').add
+EventListener('keyup', updatePreview);
 
