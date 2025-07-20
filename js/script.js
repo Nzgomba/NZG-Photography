@@ -98,4 +98,25 @@ window.addEventListener('load', () => {
   updatePreview(); // Update preview on window load
 });
 
-
+// ===== Add Event Listener for Keydown =====
+document.addEventListener('keydown', (event) => { 
+  if (event.key === 'Escape') {
+    console.log('Escape key pressed');
+    // Add any additional logic for Escape key if needed
+  }
+} );
+// ===== Add Event Listener for Clicks on the Document =====
+document.addEventListener('click', (event) => {
+  console.log(`Clicked at coordinates: (${event.clientX}, ${event.clientY})`);
+  // Add any additional logic for clicks if needed
+}); 
+// ===== Add Event Listener for Mouseover on the Preview Image =====
+const previewImage = document.getElementById('previewImage');
+if (previewImage) {
+  previewImage.addEventListener('mouseover', () => {
+    console.log('Mouseover on preview image');
+    // Add any additional logic for mouseover if needed
+  });
+} else {
+  console.error("Element with ID 'previewImage' not found.");
+}   
