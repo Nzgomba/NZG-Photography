@@ -1724,26 +1724,6 @@ footer a:hover {
   .order-container #itemPreview img.product-preview {
     max-width: 90%;
   }
-  .order-container #itemPreview img {
-    max-width: 100%;
-    height: auto;
-  }
-  .order-container input[type="submit"] {
-    width: 100%;
-    padding: 1em;
-  }
-  .order-container #itemPreview {
-    margin: 1.5em 0;
-  }
-  .order-container #itemPreview h2 {
-    font-size: 1.8rem;
-  }
-  .order-container #itemPreview p {
-    font-size: 1.1rem;
-  }
-  .order-container #itemPreview img.product-preview {
-    max-width: 90%;
-  }
 }
 .order-container #itemPreview img {
     max-width: 100%;
@@ -1765,6 +1745,7 @@ footer a:hover {
   .order-container #itemPreview img.product-preview {
     max-width: 90%;
   }
+
 .order-container #itemPreview img {
     max-width: 100%;
     height: auto;
@@ -1844,4 +1825,70 @@ footer a:hover {
     max-width: 90%;
   }
 }
-/* === ORDER PAGE STYLES END === */
+/* ===== SERVICES PAGE ===== */
+.services-section {
+  background: linear-gradient(90deg, #E1F5FE 0%, #B3DDEF 100%);
+  padding: 3em 1em;
+  border-radius: 18px;
+  margin: 3em auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 18px rgba(0, 119, 182, 0.08);
+  text-align: center;
+}
+.services-section h2 {
+  color: #1B4965;
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+  letter-spacing: 1px;
+}
+.services-grid {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,119,182,0.08);
+  padding: 2em 1.5em;
+  width: 260px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  position: relative;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,119,182,0.13);
+}
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.7em;
+  color: #0077B6;
+}
+.service-card h3 {
+  color: #0077B6;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+.service-card p {
+  color: #003355;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.services-intro {
+  margin-top: 2em;
+  font-size: 1.1rem;
+  color: #023E8A;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+}
