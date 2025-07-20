@@ -1345,6 +1345,7 @@ footer p {
   font-size: 0.9rem;
 }
 
+
 footer a {
   color: #E5F3FF;
   text-decoration: none;
@@ -1396,17 +1397,50 @@ footer a:hover {
   font-size: 1rem;
   line-height: 1.6;
 }
+.about-text h2 {
+  color: #0077B6;
+  margin-bottom: 0.5em;
+}
+.about-text p {
+  font-size: 1.1rem;
+  color: #003355;
+  line-height: 1.6;
+}
+
+.about-text ul {
+  list-style: disc;
+  margin-left: 2em;
+  color: #003355;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.about-text ul li {
+  margin-bottom: 0.5em;
+}
+.about-text ul li::before {
+  content: "•";
+  color: #0077B6;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+
 
 @media (max-width: 768px) {
   .about-grid {
     flex-direction: column;
     text-align: center;
   }
+  .about-image {
+    margin-bottom: 2em;
+  }
 
   .about-text {
     text-align: left;
   }
-}
+} 
+
+
 /* === CONTACT FORM STYLES === */
 
 .contact-form {
