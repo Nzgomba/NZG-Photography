@@ -95,8 +95,6 @@
 
 <footer class="site-footer">
 
-      
-
   <p>&copy; 2025 NZG Photography & Merch. All rights reserved.</p>
 </footer>
 
@@ -105,7 +103,28 @@
   function updatePreview() {
     const item = document.getElementById('item').value;
     const image = document.getElementById('previewImage');
+    const itemPreview = document.getElementById('itemPreview');
+    itemPreview.style.display = 'block'; // Show preview section
+    image.alt = `Preview of ${item}`;
+    image.classList.add('product-preview');
+    image.classList.remove('hidden');
+    // Update image source based on selected item
 
+    if (item === '') {
+      image.src = 'imagesplaceholder.jpg'; // Default placeholder
+      itemPreview.style.display = 'none'; // Hide preview if no item selected
+    } else if (item === 'black-hoodie') {
+      image.src = 'Hoodie-Charcoal.webp';
+    } else if (item === 'white-hoodie') {
+      image.src = 'white-hoodie.jpg';
+    } else if (item === 'blue-tee') {
+      image.src = 'blue-t-shirt.webp';
+    } else {
+      image.src = 'imagesplaceholder.jpg'; // Fallback for any other case
+    }
+    // Set image source based on item selection
+    // This assumes you have images named accordingly in your project
+    // Adjust the image source based on the selected item
     if (item === 'blue-tee') {
       image.src = 'blue-t-shirt.webp';
     } else if (item === 'black-hoodie') {
@@ -116,6 +135,10 @@
       image.src = 'imagesplaceholder.jpg';
     }
   }
+  document.getElementById('item').addEventListener('change', updatePreview);
+  document.addEventListener('DOMContentLoaded', updatePreview); 
+
+
 </script>
 </body>
 </html>
