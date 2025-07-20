@@ -17,7 +17,7 @@ function updatePreview() {
   } else if (item === 'white-hoodie') {
     image.src = 'white-hoodie.jpg';
   } else {
-    image.src = 'images/placeholder.png';
+    image.src = 'imagesplaceholder.jpg'; // Default image
   }
 }
 
@@ -33,10 +33,7 @@ if (itemElement) {
 // Add event listeners to the item select element
 
 
-document.getElementById('item').add
-EventListener('change', updatePreview); 
-document.getElementById('item').add
-EventListener('input', updatePreview);
-document.getElementById('item').add
-EventListener('keyup', updatePreview);
+document.getElementById('item').addEventListener('change', updatePreview);
+document.getElementById('item').addEventListener('input', updatePreview);
+document.getElementById('item').addEventListener('keyup', updatePreview);
 
