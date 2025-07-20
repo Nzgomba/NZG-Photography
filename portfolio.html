@@ -1,60 +1,97 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio | NZG Photography</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NZG Portfolio</title>
+  <style>
+    /* ===== BLUEY THEME STYLES ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #E1F5FE;
+      color: #1B4965;
+    }
+
+    .portfolio-container {
+      max-width: 1000px;
+      margin: 3em auto;
+      padding: 0 1em;
+      text-align: center;
+    }
+
+    .portfolio-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
+      color: #1B4965;
+    }
+
+    .portfolio-intro {
+      color: #5A8FBE;
+      font-size: 1.1rem;
+      margin-bottom: 2em;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: scale(0.96) translateY(20px);
+      transition: opacity 0.4s cubic-bezier(.77,0,.18,1), transform 0.4s cubic-bezier(.77,0,.18,1);
+      will-change: opacity, transform;
+    }
+
+    .gallery-grid img.visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <a href="index.html" class="nav-logo">NZG</a>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="order.html" >Order</a></li>
-        <li><a href="shop.html">shop</a></li>
-        <li><a href="terms.html">T&C's</a></li>
-        <li><a href="privacy.html">Privacy</a></li> 
-      </ul>
-      <div class="burger" id="burger">
-        <div></div><div></div><div></div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- PORTFOLIO SECTION -->
-  <main class="portfolio-container fade-in">
+  <main class="portfolio-container">
     <h1>📸 My Work</h1>
-    <p class="portfolio-intro">A selection of some of my favorite moments portraits, events & more.</p>
+    <p class="portfolio-intro">A selection of some of my favorite moments — portraits, events & more.</p>
 
     <div class="gallery-grid">
-          <img src="images/DSC_2892.jpg" alt="Event 1">
-       <img src="DSC_3.jpg" alt="Portrait 1"> 
-      <img src="DSC_3113.jpg" alt="Event 2">
-      <img src="DSC_3160.jpg" alt="Event 3">
-      <img src="DSC_3207.jpg" alt="Event 4">  
-      <img src="DSC_3215.jpg" alt="Portrait 2">
-      <img src="DSC_3249.jpg" alt="Event 5">
-      <img src="DSC_3257.jpg" alt="Event 6">
-      <img src="DSC_3268.jpg" alt="Portrait 3">
-      <img src="DSC_3270.jpg" alt="Event 7">
-      <img src="DSC_3295.jpg" alt="Event 7">
-      <img src="DSC_3336.jpg" alt="Event 9">
+      <img src="images/DSC_2892.jpg" alt="Event 1">
+      <img src="images/DSC_3.jpg" alt="Portrait 1">
+      <img src="images/DSC_3113.jpg" alt="Event 2">
+      <img src="images/DSC_3160.jpg" alt="Event 3">
+      <img src="images/DSC_3207.jpg" alt="Event 4">
+      <img src="images/DSC_3215.jpg" alt="Portrait 2">
+      <img src="images/DSC_3249.jpg" alt="Event 5">
+      <img src="images/DSC_3257.jpg" alt="Event 6">
+      <img src="images/DSC_3268.jpg" alt="Portrait 3">
+      <img src="images/DSC_3270.jpg" alt="Event 7">
+      <img src="images/DSC_3295.jpg" alt="Event 8">
+      <img src="images/DSC_3336.jpg" alt="Event 9">
     </div>
   </main>
-<!-- FOOTER -->
-<p>&copy; 2025 NZG Photography | <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a></p>
-    <footer class="site-footer">
-        <p>&copy; 2025 NZG Photography. All rights reserved.</p>
-        <p>Follow me on <a href="https://www.instagram.com/nzg_za/" target="_blank">Instagram</a></p>
 
-  <script src="js/script.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const images = document.querySelectorAll('.gallery-grid img');
+    images.forEach(img => observer.observe(img));
+  </script>
 </body>
 </html>
-<!-- WhatsApp Contact Button -->
