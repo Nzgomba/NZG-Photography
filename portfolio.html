@@ -2,15 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NZG Portfolio</title>
   <style>
-    /* ===== BLUEY THEME STYLES ===== */
+    /* ===== BLUEY THEME BASE STYLES ===== */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #E1F5FE;
       color: #1B4965;
+    }
+
+    nav {
+      background: #1B4965;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5em;
+    }
+
+    nav ul li a {
+      color: #B3E5FC;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #FFFFFF;
     }
 
     .portfolio-container {
@@ -61,6 +94,18 @@
 </head>
 <body>
 
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav>
+    <div class="logo">NZG 📷</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
 <header class="navbar">
   <a href="index.html" class="nav-logo">NZG</a>
   <nav>
@@ -78,8 +123,6 @@
     </div>
   </nav>
 </header> 
-
-
 
   <main class="portfolio-container">
     <h1>📸 My Work</h1>
