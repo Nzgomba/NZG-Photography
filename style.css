@@ -1574,6 +1574,7 @@ footer a:hover {
 }
 
 .order-container select,
+
 .order-container input[type="text"],    
 
 .order-container input[type="email"],
@@ -1602,12 +1603,44 @@ footer a:hover {
   text-align: center;
   margin: 2em 0;
 }
+.order-container #itemPreview h2 {
+  color: #0077B6;
+  margin-bottom: 1em;
+}
+
+.order-container #itemPreview p {
+  color: #003355;
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+.order-container #itemPreview img.product-preview {
+  max-width: 300px;
+  margin: 1.5em auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 .order-container #itemPreview img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+.order-container #itemPreview img.product-preview:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.order-container #itemPreview img.product-preview {
+  max-width: 300px;
+  margin: 1.5em auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+} 
 .order-container #itemPreview img.product-preview {
   max-width: 250px;
   margin: 1.5em auto;
@@ -1623,6 +1656,43 @@ footer a:hover {
   width: 100%;
   height: auto;
   border-radius: 12px;
+}
+.order-container #itemPreview img.product-preview {
+  max-width: 300px;
+  margin: 1.5em auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.order-container #itemPreview img.product-preview:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.order-container #itemPreview img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.order-container #itemPreview img.product-preview {
+  max-width: 300px;
+  margin: 1.5em auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.order-container #itemPreview img.product-preview:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.order-container #itemPreview img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 /* === ORDER PAGE MEDIA QUERIES === */
 @media (max-width: 768px) {
