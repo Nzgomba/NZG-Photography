@@ -21,6 +21,18 @@ function updatePreview() {
   }
 }
 
+const itemElement = document.getElementById('item');
+
+if (itemElement) {
+  itemElement.addEventListener('change', updatePreview);
+  itemElement.addEventListener('input', updatePreview);
+  itemElement.addEventListener('keyup', updatePreview);
+} else {
+  console.error("Element with ID 'item' not found.");
+}
+// Add event listeners to the item select element
+
+
 document.getElementById('item').add
 EventListener('change', updatePreview); 
 document.getElementById('item').add
