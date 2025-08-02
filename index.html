@@ -28,15 +28,21 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-bg"></div>
+  <section class="hero advanced-hero">
+    <div class="hero-bg animated-bg"></div>
     <img src="nzg-logo.png" alt="NZG Logo" class="logo" />
-    <h1 class="hero-title">NZG Photography</h1>
-    <p class="hero-subtitle">Capturing your best moments and now offering official NZG merch!</p>
+    <h1 class="hero-title">NZG Photography <span style="font-size:1.5rem;vertical-align:middle;">📸</span></h1>
+    <p class="hero-subtitle">Capturing your best moments, creative projects, and exclusive NZG merch drops!</p>
     <div class="hero-buttons">
       <a href="portfolio.html" class="cta-button">View My Work</a>
-      <a href="shop.html" class="cta-button">Shop T-Shirts & Hoodies</a>
+      <a href="shop.html" class="cta-button btn-glow">Shop Merch</a>
+      <a href="order.html" class="cta-button">Quick Order</a>
       <a href="contact.html" class="cta-button">Book a Shoot</a>
+    </div>
+    <div class="hero-features">
+      <div class="feature"><span class="feature-icon">🚚</span> Nationwide Delivery</div>
+      <div class="feature"><span class="feature-icon">🎨</span> Custom Shoots</div>
+      <div class="feature"><span class="feature-icon">🛒</span> Limited Edition Merch</div>
     </div>
   </section>
 
@@ -91,15 +97,20 @@
     <div class="service-card">
       <div class="service-icon">🎉</div>
       <h3>Event Photography</h3>
-      <p>Documenting your special moments with professional event coverage.</p>
+      <p>Professional coverage for birthdays, graduations, and more.</p>
     </div>
     <div class="service-card">
-      <div class="service-icon">👕</div>
-      <h3>Merchandise</h3>
-      <p>Stylish NZG T-shirts and hoodies to represent the brand.</p>
+      <div class="service-icon">🏙️</div>
+      <h3>Creative Projects</h3>
+      <p>Branding, street, and lifestyle shoots for individuals & businesses.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">�</div>
+      <h3>Merch & Apparel</h3>
+      <p>Exclusive NZG T-shirts, hoodies, caps, and more.</p>
     </div>
   </div>
-  <p class="services-intro">Whether you need a personal photoshoot or want to rock NZG merch, I’ve got you covered!</p>
+  <p class="services-intro">From personal shoots to creative campaigns and limited edition merch, NZG is your one-stop creative shop!</p>
 </section>
 
   <!-- REVIEWS SECTION -->
@@ -118,40 +129,65 @@
         <p class="review-text">"Professional, patient, and talented. You made me feel confident during the shoot. 10/10."</p>
         <p class="review-name">— Aisha T.</p>
       </div>
+      <div class="review-card">
+        <p class="review-text">"The NZG cap is my new favorite! Great quality and fits perfectly."</p>
+        <p class="review-name">— Thabo K.</p>
+      </div>
+      <div class="review-card">
+        <p class="review-text">"Drawstring bag is so handy for gym and travel. Love the design!"</p>
+        <p class="review-name">— Zanele P.</p>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2025 NZG Photography & Merch. All rights reserved.</p>
+    <div class="footer-grid">
+      <div>
+        <p><strong>Contact:</strong> <a href="mailto:mbali.nzg@gmail.com">mbali.nzg@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/nzg_photography" target="_blank">@nzg_photography</a></p>
+      </div>
+      <div>
+        <p>&copy; 2025 NZG Photography & Merch. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
-  
-  <!-- ...existing code... -->
-<script src="js/script.js"></script>
-<script>
-  // Animate review cards on scroll
-  function revealReviews() {
-    const cards = document.querySelectorAll('.review-card');
-    const trigger = window.innerHeight * 0.85;
-    cards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
-      if (top < trigger) {
-        card.classList.add('visible');
+  <script>
+    // Animate review cards on scroll
+    function revealReviews() {
+      const cards = document.querySelectorAll('.review-card');
+      const trigger = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < trigger) {
+          card.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealReviews);
+    window.addEventListener('load', revealReviews);
+
+    // Burger menu toggle
+    const burger = document.getElementById('burger'); 
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burger.classList.toggle('toggle');
+    });
+
+    // Advanced animated hero background
+    document.addEventListener('DOMContentLoaded', function() {
+      const bg = document.querySelector('.animated-bg');
+      if(bg) {
+        let angle = 120;
+        setInterval(() => {
+          angle = (angle + 1) % 360;
+          bg.style.background = `linear-gradient(${angle}deg, #8ED6F6 60%, #1976D2 100%)`;
+        }, 60);
       }
     });
-  }
-  window.addEventListener('scroll', revealReviews);
-  window.addEventListener('load', revealReviews);
-
-  // Burger menu toggle
-  const burger = document.getElementById('burger'); 
-  const navLinks = document.getElementById('navLinks');
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    burger.classList.toggle('toggle');
-  });
-</script>
+  </script>
 </body>
 </html>
