@@ -92,6 +92,13 @@
   <p class="cta-reward">📷 Let your style tell your story — powered by NZG.</p>
 </section>
 
+ 
+<!-- MERCH & PHOTOGRAPHY PRICES -->
+<section class="pricing-section">
+  <h2>Merch & Photography Prices</h2>
+  <div id="price-list" class="price-grid"></div>
+</section>
+
 
   </main>
 <!-- FOOTER -->
@@ -101,6 +108,27 @@
         <p>Follow me on <a href="https://www.instagram.com/nzg_za/" target="_blank">Instagram</a>  </p>
     </footer>
   <script src="js/script.js"></script>
+  <script>
+  const sheetID = '1mb8rwp3OInHWFagg9uV5JFBqHzykIuu4QSej0X2HBmk';
+
+  fetch(`https://opensheet.elk.sh/${sheetID}/Sheet1`)
+    .then((res) => res.json())
+    .then((data) => {
+      const container = document.getElementById('price-list');
+      data.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'price-card';
+        div.innerHTML = `
+          <h3>${item.Product}</h3>
+          <p>Price: R${item.Price}</p>
+          <p>${item.Description}</p>
+        `;
+        container.appendChild(div);
+      });
+    })
+    .catch(err => console.error('Failed to load pricing:', err));
+</script>
+
 </body>
 </html>
 
